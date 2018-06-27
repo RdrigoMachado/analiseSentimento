@@ -80,6 +80,24 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/Rodrigo Machado/Documents/analiseSentimento/TrieNode.cpp">
+			<Option target="analiseSentimento"/>
+		</Unit>
+		<Unit filename="C:/Users/Rodrigo Machado/Documents/analiseSentimento/TrieNode.h">
+			<Option target="analiseSentimento"/>
+		</Unit>
+		<Unit filename="C:/Users/Rodrigo Machado/Documents/analiseSentimento/Vocabulario.cpp">
+			<Option target="analiseSentimento"/>
+		</Unit>
+		<Unit filename="C:/Users/Rodrigo Machado/Documents/analiseSentimento/Vocabulario.h">
+			<Option target="analiseSentimento"/>
+		</Unit>
+		<Unit filename="C:/Users/Rodrigo Machado/Documents/analiseSentimento/cmake-build-debug/Palavra.cpp">
+			<Option target="analiseSentimento"/>
+		</Unit>
+		<Unit filename="C:/Users/Rodrigo Machado/Documents/analiseSentimento/cmake-build-debug/Palavra.h">
+			<Option target="analiseSentimento"/>
+		</Unit>
 		<Unit filename="C:/Users/Rodrigo Machado/Documents/analiseSentimento/main.cpp">
 			<Option target="analiseSentimento"/>
 		</Unit>

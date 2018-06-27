@@ -122,6 +122,87 @@ analiseSentimento/fast:
 	$(MAKE) -f CMakeFiles\analiseSentimento.dir\build.make CMakeFiles/analiseSentimento.dir/build
 .PHONY : analiseSentimento/fast
 
+Palavra.obj: Palavra.cpp.obj
+
+.PHONY : Palavra.obj
+
+# target to build an object file
+Palavra.cpp.obj:
+	$(MAKE) -f CMakeFiles\analiseSentimento.dir\build.make CMakeFiles/analiseSentimento.dir/Palavra.cpp.obj
+.PHONY : Palavra.cpp.obj
+
+Palavra.i: Palavra.cpp.i
+
+.PHONY : Palavra.i
+
+# target to preprocess a source file
+Palavra.cpp.i:
+	$(MAKE) -f CMakeFiles\analiseSentimento.dir\build.make CMakeFiles/analiseSentimento.dir/Palavra.cpp.i
+.PHONY : Palavra.cpp.i
+
+Palavra.s: Palavra.cpp.s
+
+.PHONY : Palavra.s
+
+# target to generate assembly for a file
+Palavra.cpp.s:
+	$(MAKE) -f CMakeFiles\analiseSentimento.dir\build.make CMakeFiles/analiseSentimento.dir/Palavra.cpp.s
+.PHONY : Palavra.cpp.s
+
+TrieNode.obj: TrieNode.cpp.obj
+
+.PHONY : TrieNode.obj
+
+# target to build an object file
+TrieNode.cpp.obj:
+	$(MAKE) -f CMakeFiles\analiseSentimento.dir\build.make CMakeFiles/analiseSentimento.dir/TrieNode.cpp.obj
+.PHONY : TrieNode.cpp.obj
+
+TrieNode.i: TrieNode.cpp.i
+
+.PHONY : TrieNode.i
+
+# target to preprocess a source file
+TrieNode.cpp.i:
+	$(MAKE) -f CMakeFiles\analiseSentimento.dir\build.make CMakeFiles/analiseSentimento.dir/TrieNode.cpp.i
+.PHONY : TrieNode.cpp.i
+
+TrieNode.s: TrieNode.cpp.s
+
+.PHONY : TrieNode.s
+
+# target to generate assembly for a file
+TrieNode.cpp.s:
+	$(MAKE) -f CMakeFiles\analiseSentimento.dir\build.make CMakeFiles/analiseSentimento.dir/TrieNode.cpp.s
+.PHONY : TrieNode.cpp.s
+
+Vocabulario.obj: Vocabulario.cpp.obj
+
+.PHONY : Vocabulario.obj
+
+# target to build an object file
+Vocabulario.cpp.obj:
+	$(MAKE) -f CMakeFiles\analiseSentimento.dir\build.make CMakeFiles/analiseSentimento.dir/Vocabulario.cpp.obj
+.PHONY : Vocabulario.cpp.obj
+
+Vocabulario.i: Vocabulario.cpp.i
+
+.PHONY : Vocabulario.i
+
+# target to preprocess a source file
+Vocabulario.cpp.i:
+	$(MAKE) -f CMakeFiles\analiseSentimento.dir\build.make CMakeFiles/analiseSentimento.dir/Vocabulario.cpp.i
+.PHONY : Vocabulario.cpp.i
+
+Vocabulario.s: Vocabulario.cpp.s
+
+.PHONY : Vocabulario.s
+
+# target to generate assembly for a file
+Vocabulario.cpp.s:
+	$(MAKE) -f CMakeFiles\analiseSentimento.dir\build.make CMakeFiles/analiseSentimento.dir/Vocabulario.cpp.s
+.PHONY : Vocabulario.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -158,6 +239,15 @@ help:
 	@echo ... analiseSentimento
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... Palavra.obj
+	@echo ... Palavra.i
+	@echo ... Palavra.s
+	@echo ... TrieNode.obj
+	@echo ... TrieNode.i
+	@echo ... TrieNode.s
+	@echo ... Vocabulario.obj
+	@echo ... Vocabulario.i
+	@echo ... Vocabulario.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

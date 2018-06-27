@@ -80,19 +80,97 @@ CMakeFiles/analiseSentimento.dir/main.cpp.obj.provides: CMakeFiles/analiseSentim
 CMakeFiles/analiseSentimento.dir/main.cpp.obj.provides.build: CMakeFiles/analiseSentimento.dir/main.cpp.obj
 
 
+CMakeFiles/analiseSentimento.dir/TrieNode.cpp.obj: CMakeFiles/analiseSentimento.dir/flags.make
+CMakeFiles/analiseSentimento.dir/TrieNode.cpp.obj: ../TrieNode.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Rodrigo Machado\Documents\analiseSentimento\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/analiseSentimento.dir/TrieNode.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\analiseSentimento.dir\TrieNode.cpp.obj -c "C:\Users\Rodrigo Machado\Documents\analiseSentimento\TrieNode.cpp"
+
+CMakeFiles/analiseSentimento.dir/TrieNode.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/analiseSentimento.dir/TrieNode.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Rodrigo Machado\Documents\analiseSentimento\TrieNode.cpp" > CMakeFiles\analiseSentimento.dir\TrieNode.cpp.i
+
+CMakeFiles/analiseSentimento.dir/TrieNode.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/analiseSentimento.dir/TrieNode.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Rodrigo Machado\Documents\analiseSentimento\TrieNode.cpp" -o CMakeFiles\analiseSentimento.dir\TrieNode.cpp.s
+
+CMakeFiles/analiseSentimento.dir/TrieNode.cpp.obj.requires:
+
+.PHONY : CMakeFiles/analiseSentimento.dir/TrieNode.cpp.obj.requires
+
+CMakeFiles/analiseSentimento.dir/TrieNode.cpp.obj.provides: CMakeFiles/analiseSentimento.dir/TrieNode.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\analiseSentimento.dir\build.make CMakeFiles/analiseSentimento.dir/TrieNode.cpp.obj.provides.build
+.PHONY : CMakeFiles/analiseSentimento.dir/TrieNode.cpp.obj.provides
+
+CMakeFiles/analiseSentimento.dir/TrieNode.cpp.obj.provides.build: CMakeFiles/analiseSentimento.dir/TrieNode.cpp.obj
+
+
+CMakeFiles/analiseSentimento.dir/Vocabulario.cpp.obj: CMakeFiles/analiseSentimento.dir/flags.make
+CMakeFiles/analiseSentimento.dir/Vocabulario.cpp.obj: ../Vocabulario.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Rodrigo Machado\Documents\analiseSentimento\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/analiseSentimento.dir/Vocabulario.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\analiseSentimento.dir\Vocabulario.cpp.obj -c "C:\Users\Rodrigo Machado\Documents\analiseSentimento\Vocabulario.cpp"
+
+CMakeFiles/analiseSentimento.dir/Vocabulario.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/analiseSentimento.dir/Vocabulario.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Rodrigo Machado\Documents\analiseSentimento\Vocabulario.cpp" > CMakeFiles\analiseSentimento.dir\Vocabulario.cpp.i
+
+CMakeFiles/analiseSentimento.dir/Vocabulario.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/analiseSentimento.dir/Vocabulario.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Rodrigo Machado\Documents\analiseSentimento\Vocabulario.cpp" -o CMakeFiles\analiseSentimento.dir\Vocabulario.cpp.s
+
+CMakeFiles/analiseSentimento.dir/Vocabulario.cpp.obj.requires:
+
+.PHONY : CMakeFiles/analiseSentimento.dir/Vocabulario.cpp.obj.requires
+
+CMakeFiles/analiseSentimento.dir/Vocabulario.cpp.obj.provides: CMakeFiles/analiseSentimento.dir/Vocabulario.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\analiseSentimento.dir\build.make CMakeFiles/analiseSentimento.dir/Vocabulario.cpp.obj.provides.build
+.PHONY : CMakeFiles/analiseSentimento.dir/Vocabulario.cpp.obj.provides
+
+CMakeFiles/analiseSentimento.dir/Vocabulario.cpp.obj.provides.build: CMakeFiles/analiseSentimento.dir/Vocabulario.cpp.obj
+
+
+CMakeFiles/analiseSentimento.dir/Palavra.cpp.obj: CMakeFiles/analiseSentimento.dir/flags.make
+CMakeFiles/analiseSentimento.dir/Palavra.cpp.obj: Palavra.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Rodrigo Machado\Documents\analiseSentimento\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/analiseSentimento.dir/Palavra.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\analiseSentimento.dir\Palavra.cpp.obj -c "C:\Users\Rodrigo Machado\Documents\analiseSentimento\cmake-build-debug\Palavra.cpp"
+
+CMakeFiles/analiseSentimento.dir/Palavra.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/analiseSentimento.dir/Palavra.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Rodrigo Machado\Documents\analiseSentimento\cmake-build-debug\Palavra.cpp" > CMakeFiles\analiseSentimento.dir\Palavra.cpp.i
+
+CMakeFiles/analiseSentimento.dir/Palavra.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/analiseSentimento.dir/Palavra.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Rodrigo Machado\Documents\analiseSentimento\cmake-build-debug\Palavra.cpp" -o CMakeFiles\analiseSentimento.dir\Palavra.cpp.s
+
+CMakeFiles/analiseSentimento.dir/Palavra.cpp.obj.requires:
+
+.PHONY : CMakeFiles/analiseSentimento.dir/Palavra.cpp.obj.requires
+
+CMakeFiles/analiseSentimento.dir/Palavra.cpp.obj.provides: CMakeFiles/analiseSentimento.dir/Palavra.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\analiseSentimento.dir\build.make CMakeFiles/analiseSentimento.dir/Palavra.cpp.obj.provides.build
+.PHONY : CMakeFiles/analiseSentimento.dir/Palavra.cpp.obj.provides
+
+CMakeFiles/analiseSentimento.dir/Palavra.cpp.obj.provides.build: CMakeFiles/analiseSentimento.dir/Palavra.cpp.obj
+
+
 # Object files for target analiseSentimento
 analiseSentimento_OBJECTS = \
-"CMakeFiles/analiseSentimento.dir/main.cpp.obj"
+"CMakeFiles/analiseSentimento.dir/main.cpp.obj" \
+"CMakeFiles/analiseSentimento.dir/TrieNode.cpp.obj" \
+"CMakeFiles/analiseSentimento.dir/Vocabulario.cpp.obj" \
+"CMakeFiles/analiseSentimento.dir/Palavra.cpp.obj"
 
 # External object files for target analiseSentimento
 analiseSentimento_EXTERNAL_OBJECTS =
 
 analiseSentimento.exe: CMakeFiles/analiseSentimento.dir/main.cpp.obj
+analiseSentimento.exe: CMakeFiles/analiseSentimento.dir/TrieNode.cpp.obj
+analiseSentimento.exe: CMakeFiles/analiseSentimento.dir/Vocabulario.cpp.obj
+analiseSentimento.exe: CMakeFiles/analiseSentimento.dir/Palavra.cpp.obj
 analiseSentimento.exe: CMakeFiles/analiseSentimento.dir/build.make
 analiseSentimento.exe: CMakeFiles/analiseSentimento.dir/linklibs.rsp
 analiseSentimento.exe: CMakeFiles/analiseSentimento.dir/objects1.rsp
 analiseSentimento.exe: CMakeFiles/analiseSentimento.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Rodrigo Machado\Documents\analiseSentimento\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable analiseSentimento.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Rodrigo Machado\Documents\analiseSentimento\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable analiseSentimento.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\analiseSentimento.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -101,6 +179,9 @@ CMakeFiles/analiseSentimento.dir/build: analiseSentimento.exe
 .PHONY : CMakeFiles/analiseSentimento.dir/build
 
 CMakeFiles/analiseSentimento.dir/requires: CMakeFiles/analiseSentimento.dir/main.cpp.obj.requires
+CMakeFiles/analiseSentimento.dir/requires: CMakeFiles/analiseSentimento.dir/TrieNode.cpp.obj.requires
+CMakeFiles/analiseSentimento.dir/requires: CMakeFiles/analiseSentimento.dir/Vocabulario.cpp.obj.requires
+CMakeFiles/analiseSentimento.dir/requires: CMakeFiles/analiseSentimento.dir/Palavra.cpp.obj.requires
 
 .PHONY : CMakeFiles/analiseSentimento.dir/requires
 

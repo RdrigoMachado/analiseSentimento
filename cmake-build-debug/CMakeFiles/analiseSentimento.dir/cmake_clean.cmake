@@ -1,5 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/analiseSentimento.dir/main.cpp.obj"
+  "CMakeFiles/analiseSentimento.dir/TrieNode.cpp.obj"
+  "CMakeFiles/analiseSentimento.dir/Vocabulario.cpp.obj"
+  "CMakeFiles/analiseSentimento.dir/Palavra.cpp.obj"
   "analiseSentimento.pdb"
   "analiseSentimento.exe"
   "analiseSentimento.exe.manifest"
