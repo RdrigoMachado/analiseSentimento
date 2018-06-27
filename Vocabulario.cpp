@@ -4,6 +4,9 @@
 
 #include "Vocabulario.h"
 
+Vocabulario::Vocabulario() {
+    raiz = new TrieNode();
+}
 
 void Vocabulario::adicionar(string palavra, int nota){
     TrieNode *auxiliar = Vocabulario::raiz;
@@ -33,4 +36,20 @@ bool Vocabulario::procurar(string palavra){
             return auxiliar->endOfWord;
         else
             return false;
+}
+
+TrieNode* Vocabulario::devolvePalavra(string palavra){
+        TrieNode *auxiliar = Vocabulario::raiz;
+        for(int i = 0; i < palavra.length(); i++){
+            int index = palavra[i] - 'a';
+            if(auxiliar->filhos[index] == NULL)
+                return NULL;
+            else
+                auxiliar = auxiliar->filhos[index];
+        }
+
+        if(auxiliar!= NULL)
+            return auxiliar;
+        else
+            return NULL;
 }

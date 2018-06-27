@@ -16,6 +16,9 @@ class Vocabulario {
         TrieNode *raiz;
         void adicionar(string palavra, int nota);
         bool procurar(string palavra);
+        TrieNode* devolvePalavra(string palavra);
+
+    Vocabulario();
 
 };
 
