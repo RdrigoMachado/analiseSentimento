@@ -10,6 +10,7 @@ class Palavra {
         double score;
         Palavra(string nome, int nota);
         void atualizar(int nota);
+        double scoreMedio(void);
 };
 
 

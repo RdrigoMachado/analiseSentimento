@@ -9,9 +9,16 @@
 
 
     void Palavra::atualizar(int nota) {
-        /*objetivo: atualizar o score fazendo a media entre
-         o valor anterior e a nova nota*/
+        /*Incrementa o numero de aparicoes em um e
+         * soma a nova nota ao score total
+         * */
         aparicoes++;
-        score = (score + double(nota)) / 2;
+        score += nota;
     }
 
+    double Palavra::scoreMedio(void) {
+        /*Retorma o score medio
+         * */
+
+        return double(score)/aparicoes;
+    }

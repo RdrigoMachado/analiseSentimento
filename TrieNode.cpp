@@ -1,7 +1,3 @@
-//
-// Created by Rodrigo Machado on 27/06/2018.
-//
-
 #include "TrieNode.h"
 
 
