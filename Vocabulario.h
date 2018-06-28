@@ -4,6 +4,8 @@
 #include "TrieNode.h"
 #include "Palavra.h"
 #include <string>
+#include <list>
+
 
 using namespace std;
 
@@ -16,7 +18,7 @@ class Vocabulario {
         TrieNode* devolvePalavra(string palavra);
         double scoreMedio(string palavra);
         Vocabulario();
-
+        list<string> buscaPalavrasPrefixo(string prefixo);
 };
 
 

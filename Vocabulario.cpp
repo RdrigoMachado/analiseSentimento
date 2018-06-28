@@ -26,7 +26,6 @@ void Vocabulario::adicionar(string palavra, int nota){
     }
 }
 
-
 bool Vocabulario::procurar(string palavra){
         TrieNode *auxiliar = Vocabulario::raiz;
         for(int i = 0; i < palavra.length(); i++){
@@ -41,6 +40,41 @@ bool Vocabulario::procurar(string palavra){
             return auxiliar->endOfWord;
         else
             return false;
+}
+
+list<string> retornaPalavrasSubArvores(TrieNode *auxiliar){
+    list<string> palavras = {};
+    for(int i =0; i < alfabeto; i++) {
+        if (auxiliar->filhos[i] != NULL) {
+            if (auxiliar->filhos[i]->endOfWord) {
+                palavras.push_back(auxiliar->filhos[i]->palavra->nome);
+            }
+            palavras.merge(retornaPalavrasSubArvores(auxiliar->filhos[i]));
+        }
+    }
+    return palavras;
+}
+
+list<string> Vocabulario::buscaPalavrasPrefixo(string prefixo) {
+    TrieNode *auxiliar = Vocabulario::raiz;
+    list<string> palavras = {};
+
+    for (int i = 0; i < prefixo.length(); i++) {
+        int index = prefixo[i] - 'a';
+        if (auxiliar->filhos[index] == NULL)
+            return palavras;
+        else
+            auxiliar = auxiliar->filhos[index];
+    }
+
+    if (auxiliar == NULL)
+        return palavras;
+    else{
+        if (auxiliar->endOfWord) {
+            palavras.push_back(auxiliar->palavra->nome);
+        }
+        palavras.merge(retornaPalavrasSubArvores(auxiliar));
+    }
 }
 
 TrieNode* Vocabulario::devolvePalavra(string palavra){
