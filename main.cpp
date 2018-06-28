@@ -100,6 +100,13 @@ void alimentaVocabulario(Vocabulario vocab, ifstream *myfile ){
                 palavra++;
                 metadado.palavra = palavra;
                 vocab.adicionar(sub, score, metadado);
+            }else if(len == string::npos){
+                sub = linha.substr(0,len);
+                if(sub.length()>0){
+                    palavra++;
+                    metadado.palavra = palavra;
+                    vocab.adicionar(sub, score, metadado);
+                }
             }
             else {
                 sub = linha.substr(0,linha.size()-1);
@@ -148,6 +155,13 @@ void alimentaVocabularioKaggle(Vocabulario vocab, ifstream *myfile ){
                 palavra++;
                 metadado.palavra = palavra;
                 vocab.adicionar(sub, score, metadado);
+            }else if(len == string::npos){
+                sub = linha.substr(0,len);
+                if(sub.length()>0){
+                    palavra++;
+                    metadado.palavra = palavra;
+                    vocab.adicionar(sub, score, metadado);
+                }
             }
             else {
                 sub = linha.substr(0,linha.size()-1);
@@ -176,7 +190,60 @@ void listarPalavrasPrefixo(Vocabulario vocab, string prefixo){
     }
 }
 
+void exportarAvaliacoes(Vocabulario vocab){
+    ofstream saida ("avaliacoes.csv");
+    saida << "PhraseId,Sentiment\n";
 
+    string linha;
+    int len = 0;
+
+    ifstream avaliacoes("data/test.tsv");
+    getline(avaliacoes, linha); // linha sem dados significativos
+    while (getline(avaliacoes,linha))
+    {
+        double media = 0;
+        int palavras = 0;
+        len = linha.find(9);
+        saida << linha.substr(0, len)<<",";
+        linha = linha.substr(len+1, linha.size());
+        len = linha.find(9);
+        linha = linha.substr(len+1, linha.size());// pula sentenceId
+        linha = normalizarLinha(linha);
+        len = linha.size();
+        while(len > 0) {
+
+            string sub;
+            len = linha.find(" ");
+            if (len > 0)
+            {
+                sub = linha.substr(0,len);
+                linha = linha.substr(len+1,linha.size());
+                palavras++;
+                double temp = vocab.scoreMedio(sub);
+                media = media + temp;
+            }else if(len == string::npos){
+                sub = linha;
+                if(sub.length()>0){
+                    palavras++;
+                    media = media + vocab.scoreMedio(sub);
+                }
+            }
+            else {
+                sub = linha.substr(0,linha.size()-1);
+            }
+
+        }
+        if(palavras == 0){
+            saida << 0 << endl;
+        }
+        else
+            saida << int(media/palavras) << endl;
+    }
+
+
+    //saida <<;
+
+}
 
 
 
@@ -185,7 +252,17 @@ int main() {
 
     char escolha = 1; //0 arquivo exemplo, 1 arquivo de treinamento do kaggle
     ifstream arquivo;
-    while(escolha != '1' && escolha !='0'){
+    Vocabulario vocab;
+
+    arquivo.open("data/train.tsv");
+    if (arquivo.fail()) {
+        cout << "Nao foi possivel abrir o arquivo" << endl;
+        exit(0);
+    }
+    cout << "Carregando Vocabulario Kaggle" << endl;
+    alimentaVocabularioKaggle(vocab, &arquivo);
+    exportarAvaliacoes(vocab);
+    /*while(escolha != '1' && escolha !='0'){
         cout << "Digite o para carregar vocabulario compacto" << endl;
         cout << "ou 1 para carregar vocabulario do Kaggle: ";
         escolha = getchar();
@@ -193,7 +270,7 @@ int main() {
 
     Vocabulario vocab;
 
-    if (escolha == 1) {
+    if (escolha == '1') {
         arquivo.open("data/train.tsv");
         if (arquivo.fail()) {
             cout << "Nao foi possivel abrir o arquivo" << endl;
@@ -238,6 +315,6 @@ int main() {
             listarPalavrasPrefixo(vocab, prefixo);
             break;
     }
-
+*/
     return 0;
 };

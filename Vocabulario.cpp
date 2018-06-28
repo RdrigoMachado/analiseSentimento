@@ -14,16 +14,13 @@ void Vocabulario::adicionar(string palavra, int nota, meta_dados dados){
         auxiliar = auxiliar->filhos[index];
     }
     if(auxiliar->palavra == NULL) {
-        //cout << "adicionando " << palavra << "\n";
         auxiliar->endOfWord = true;
         auxiliar->palavra = new Palavra(palavra, nota);
         auxiliar->palavra->incluiMetaDado(&dados);
     }
     else{
-        //cout << "atualizando " << palavra << "\n";
-        auxiliar->palavra->atualizar(nota);
+       auxiliar->palavra->atualizar(nota);
         auxiliar->palavra->incluiMetaDado(&dados);
-        //cout << "nota atual: " << auxiliar->palavra->scoreMedio() << "\n";
     }
 }
 
@@ -88,7 +85,7 @@ list<meta_dados> Vocabulario::devolvePalavraMetaDado(string palavra){
             else
                 auxiliar = auxiliar->filhos[index];
         }
-        if(auxiliar!= NULL)
+        if(auxiliar!= NULL && auxiliar->endOfWord)
             return auxiliar->palavra->dadosAparicoes;
         else{
 
@@ -101,19 +98,15 @@ double Vocabulario::scoreMedio(string palavra){
     for(int i = 0; i < palavra.length(); i++){
         int index = palavra[i] - 'a';
         if(auxiliar->filhos[index] == NULL){
-            cout << "Palavra: " << palavra << ", nao existe no vocabulario." << endl;
-            cout << "Retornando valor central da distribuicao de notas: 2" << endl;
-            return 2;
+             return 2;
         }
         else
             auxiliar = auxiliar->filhos[index];
     }
 
-    if(auxiliar!= NULL)
+    if(auxiliar!= NULL && auxiliar->endOfWord)
         return auxiliar->palavra->scoreMedio();
     else {
-        cout << "Palavra: " << palavra << ", nao existe no vocabulario." << endl;
-        cout << "Retornando valor central da distribuicao de notas: 2" << endl;
         return 2;
     }
 }
