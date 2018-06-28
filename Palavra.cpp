@@ -22,3 +22,7 @@
 
         return double(score)/aparicoes;
     }
+
+    void Palavra::incluiMetaDado(meta_dados *metadado){
+        dadosAparicoes.push_back(*metadado);
+    }

@@ -1,11 +1,10 @@
 #include "Vocabulario.h"
-#include <iostream>
 
 Vocabulario::Vocabulario() {
     raiz = new TrieNode();
 }
 
-void Vocabulario::adicionar(string palavra, int nota){
+void Vocabulario::adicionar(string palavra, int nota, meta_dados dados){
     TrieNode *auxiliar = Vocabulario::raiz;
     for(int i= 0; i < palavra.length(); i++){
         int index = palavra[i] - 'a';
@@ -18,10 +17,12 @@ void Vocabulario::adicionar(string palavra, int nota){
         //cout << "adicionando " << palavra << "\n";
         auxiliar->endOfWord = true;
         auxiliar->palavra = new Palavra(palavra, nota);
+        auxiliar->palavra->incluiMetaDado(&dados);
     }
     else{
         //cout << "atualizando " << palavra << "\n";
         auxiliar->palavra->atualizar(nota);
+        auxiliar->palavra->incluiMetaDado(&dados);
         //cout << "nota atual: " << auxiliar->palavra->scoreMedio() << "\n";
     }
 }
@@ -77,20 +78,22 @@ list<string> Vocabulario::buscaPalavrasPrefixo(string prefixo) {
     }
 }
 
-TrieNode* Vocabulario::devolvePalavra(string palavra){
+list<meta_dados> Vocabulario::devolvePalavraMetaDado(string palavra){
         TrieNode *auxiliar = Vocabulario::raiz;
+        list<meta_dados> foo;
         for(int i = 0; i < palavra.length(); i++){
             int index = palavra[i] - 'a';
             if(auxiliar->filhos[index] == NULL)
-                return NULL;
+                return foo;
             else
                 auxiliar = auxiliar->filhos[index];
         }
-
         if(auxiliar!= NULL)
-            return auxiliar;
-        else
-            return NULL;
+            return auxiliar->palavra->dadosAparicoes;
+        else{
+
+            return foo;
+        }
 }
 
 double Vocabulario::scoreMedio(string palavra){

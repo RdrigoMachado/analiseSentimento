@@ -5,6 +5,7 @@
 #include "Palavra.h"
 #include <string>
 #include <list>
+#include <iostream>
 
 
 using namespace std;
@@ -13,9 +14,9 @@ class Vocabulario {
 
     public:
         TrieNode *raiz;
-        void adicionar(string palavra, int nota);
+        void adicionar(string palavra, int nota, meta_dados dados);
         bool procurar(string palavra);
-        TrieNode* devolvePalavra(string palavra);
+        list<meta_dados> devolvePalavraMetaDado(string palavra);
         double scoreMedio(string palavra);
         Vocabulario();
         list<string> buscaPalavrasPrefixo(string prefixo);
